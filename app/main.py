@@ -109,7 +109,7 @@ async def predict_batct(file: UploadFile = File(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error Processing file: {str(e)}")
     
-# Background tasl to clean up temporary files
+# Background task to clean up temporary files
 from starlette.background import BackgroundTask
 
 
